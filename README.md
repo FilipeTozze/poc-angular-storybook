@@ -8,4 +8,4 @@ Execute `ng serve` para levantar o servidor de desenvolvimento localmente. Naveg
 
 ## Execução do StoryBook
 
-Execute `npm run storybook` para visualizar a documentação dos componentes disponíveis e interagir com eles.
+Execute `npm run storybook` para visualizar a documentação dos componentes disponíveis e interagir com eles. É possível visualizar o build do projeto [NgStorybook](https://storybook-angular.netlify.app/) hospedado na [Netlify](https://www.netlify.com/).
