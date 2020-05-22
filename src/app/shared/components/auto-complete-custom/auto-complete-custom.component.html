@@ -1,0 +1,20 @@
+<form class="autocomplite-form">
+  <mat-form-field class="autocomplite-full-width">
+    <input
+      type="text"
+      placeholder="Companies"
+      aria-label="Number"
+      matInput
+      [formControl]="formControl"
+      [matAutocomplete]="auto"
+    />
+    <mat-autocomplete #auto="matAutocomplete">
+      <mat-option
+        *ngFor="let option of filteredOptions | async"
+        [value]="option.cnpj"
+      >
+        {{ option.name }} ({{ option.cnpj | cnpj }})
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</form>
