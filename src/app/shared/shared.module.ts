@@ -1,12 +1,14 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { FlexLayoutModule } from "@angular/flex-layout";
 
 import { MaterialDesignModule } from "./material-design/material-design.module";
 import { ToolbarCustomComponent } from "src/app/shared/components/toolbar-custom/toolbar-custom.component";
 import { InputCustomComponent } from "src/app/shared/components/input-custom/input-custom.component";
 import { AutoCompleteCustomComponent } from "./components/auto-complete-custom/auto-complete-custom.component";
-import { CnpjPipe } from './pipe/cnpj.pipe';
+import { CnpjPipe } from "./pipe/cnpj.pipe";
+import { PersonComponent } from "./components/person/person.component";
 
 @NgModule({
   declarations: [
@@ -14,12 +16,14 @@ import { CnpjPipe } from './pipe/cnpj.pipe';
     InputCustomComponent,
     AutoCompleteCustomComponent,
     CnpjPipe,
+    PersonComponent,
   ],
   imports: [
     CommonModule,
     MaterialDesignModule,
     FormsModule,
     ReactiveFormsModule,
+    FlexLayoutModule,
   ],
   exports: [
     MaterialDesignModule,
@@ -28,6 +32,7 @@ import { CnpjPipe } from './pipe/cnpj.pipe';
     ToolbarCustomComponent,
     InputCustomComponent,
     AutoCompleteCustomComponent,
+    PersonComponent,
   ],
 })
 export class SharedModule {}
