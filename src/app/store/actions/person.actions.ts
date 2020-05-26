@@ -19,7 +19,7 @@ export class PersonNew implements Action {
 
 export class PersonUpdate implements Action {
   readonly type = PersonActionTypes.PERSON_UPDATE;
-  constructor(public playload: { person: Person }) {}
+  constructor(public playload: { id: string; changes: Partial<Person> }) {}
 }
 
 export class PersonDelete implements Action {

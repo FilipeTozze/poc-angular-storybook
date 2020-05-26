@@ -1,9 +1,11 @@
-import { AppState } from "..";
-import { createSelector } from "@ngrx/store";
+import { createFeatureSelector } from "@ngrx/store";
+import { PeopleState, peopleAdapter } from "../reducers/person.reducer";
 
-export const selectPeople = (state: AppState) => state.people;
+export const peopleStateSelector = createFeatureSelector<PeopleState>("people");
 
-export const selectPeopleCount = createSelector(
-  selectPeople,
-  (people) => people.length
-);
+export const {
+  selectIds,
+  selectEntities,
+  selectAll,
+  selectTotal,
+} = peopleAdapter.getSelectors(peopleStateSelector);

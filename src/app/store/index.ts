@@ -1,10 +1,9 @@
-import { Person } from "../shared/models/person.model";
 import { ActionReducerMap } from "@ngrx/store";
 
-import { personReducer } from "./reducers/person.reducer";
+import { personReducer, PeopleState } from "./reducers/person.reducer";
 
 export interface AppState {
-  people: Person[];
+  people: PeopleState;
   //otherStore: OtherStore[]; Examples of others stores
 }
 

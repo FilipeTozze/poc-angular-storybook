@@ -3,7 +3,7 @@ import { Observable } from "rxjs";
 import { Person } from "src/app/shared/models/person.model";
 
 import * as faker from "faker";
-import { Store, select } from "@ngrx/store";
+import { Store } from "@ngrx/store";
 import { AppState } from "src/app/store";
 import {
   PersonNew,
@@ -12,8 +12,8 @@ import {
   PersonDelete,
 } from "src/app/store/actions/person.actions";
 import {
-  selectPeople,
-  selectPeopleCount,
+  selectAll,
+  selectTotal,
 } from "src/app/store/selectors/person.selector";
 
 @Component({
@@ -28,10 +28,8 @@ export class GeneralElementsComponent implements OnInit {
 
   ngOnInit() {
     this.store.dispatch(new PersonAll());
-    this.people$ = this.store.select(selectPeople);
-    this.store
-      .select(selectPeopleCount)
-      .subscribe((n) => (this.totalPerson = n));
+    this.people$ = this.store.select(selectAll);
+    this.store.select(selectTotal).subscribe((n) => (this.totalPerson = n));
   }
 
   addNew() {
@@ -55,7 +53,7 @@ export class GeneralElementsComponent implements OnInit {
     person.country = faker.address.country();
     person.age = Math.round(Math.random() * 100);
 
-    this.store.dispatch(new PersonUpdate({ person }));
+    this.store.dispatch(new PersonUpdate({ id: person._id, changes: person }));
   }
 
   delete(p: Person) {
