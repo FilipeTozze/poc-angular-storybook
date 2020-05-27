@@ -1,7 +1,7 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
-import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
+import { CoreModule } from "src/app/core/core.module";
 import { StoreModule } from "@ngrx/store";
 import { StoreDevtoolsModule } from "@ngrx/store-devtools";
 
@@ -15,7 +15,7 @@ import { appReducers } from "./store";
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
+    CoreModule,
     StoreModule.forRoot(appReducers),
     StoreDevtoolsModule.instrument({
       maxAge: 25,
