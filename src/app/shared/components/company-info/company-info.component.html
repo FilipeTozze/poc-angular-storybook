@@ -1,0 +1,36 @@
+<mat-card>
+    <div class="container-company-info">
+        <div class="content-divisor name-company-info">
+            <h2 style="margin-bottom: 14px; margin-top: -8px;">{{dataObj.dadosClienteCreditoPJ.nome}}</h2>
+            <div class="subtitle-company-info">CNPJ {{dataObj.dadosClienteCreditoPJ.numeroDocumento | cnpj}}</div>
+        </div>
+        <div class="content-divisor">
+            <div class="progressbar-campany-info">
+                <p class="format-subtitle-p" style="margin-bottom: 37px;margin-top: 16px;">Limite atual do grupo</p>
+                <mat-progress-bar mode="determinate" value="50" class="mat-progress-bar"></mat-progress-bar> <span style="float: left; margin-left: 5px;">{{dataObj.valorLimite.proposto | numberFormat : 2}}</span>                           
+            </div>  
+            <p style="padding-top: 45px;">{{dataObj.valorLimite.contratado | numberFormat : 2}}</p>          
+        </div>
+        <div class="content-divisor">
+            <div class="date-company-info">
+                <p class="format-subtitle-p">Vencimento</p>
+                <mat-icon aria-hidden="false" aria-label="Example home icon" class="format-icon">date_range</mat-icon>
+                <p>{{dataObj.dataVencimento}}</p>              
+            </div>
+        </div>
+        <div class="content-divisor">
+            <div class="rating-company-info">
+                <p class="format-subtitle-p">Rating</p>
+                <mat-icon aria-hidden="false" aria-label="Example home icon" class="format-icon">star_rate</mat-icon>           
+                <p>{{dataObj.rating}}</p>    
+            </div>
+        </div>
+        <div class="content-divisor">
+            <div class="setor-company-info">
+                <p class="format-subtitle-p">Setor</p>
+                <mat-icon aria-hidden="false" aria-label="Example home icon" class="format-icon">pie_chart</mat-icon>          
+                <p>{{dataObj.setor}}</p>      
+            </div>
+        </div>
+    </div>
+</mat-card> 
