@@ -10,6 +10,7 @@ import { AutoCompleteCustomComponent } from "./components/auto-complete-custom/a
 import { CnpjPipe } from "./pipe/cnpj.pipe";
 import { PersonComponent } from "./components/person/person.component";
 import { CompanyInfoComponent } from './components/company-info/company-info.component';
+import { NumberFormatPipe } from './pipe/number-format.pipe';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { CompanyInfoComponent } from './components/company-info/company-info.com
     CnpjPipe,
     PersonComponent,
     CompanyInfoComponent,
+    NumberFormatPipe,
   ],
   imports: [
     CommonModule,

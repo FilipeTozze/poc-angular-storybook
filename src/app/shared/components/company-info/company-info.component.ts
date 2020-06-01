@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { ResponseCampany } from '../../models/responseHttp/responseCompany.model';
 
 @Component({
   selector: 'app-company-info',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./company-info.component.scss']
 })
 export class CompanyInfoComponent implements OnInit {
+
+  @Input() dataObj: ResponseCampany;
 
   constructor() { }
 
