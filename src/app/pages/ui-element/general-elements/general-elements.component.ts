@@ -29,8 +29,7 @@ export class GeneralElementsComponent implements OnInit {
     this.people$ = this.store.select(selectAll);
     this.store.select(selectTotal).subscribe((n) => (this.totalPerson = n));
 
-    this.store.dispatch(new CompanyAll());
-    this.companie$ = this.store.select(selectAllCompany);
+    
     this.addNewRequestResponse()
   }
 
@@ -69,9 +68,9 @@ export class GeneralElementsComponent implements OnInit {
         "dadosClienteCreditoPJ": {
             "id": 1,
             "nivelGrupo": "Subgrupo",
-            "nome": "Americanas",
+            "nome": "Empresa Teste",
             "tipoPessoa": "J",
-            "numeroDocumento": "123456789000100",
+            "numeroDocumento": "95970738000198",
             "segmento": "G"
         },
         "valorLimite": {
@@ -88,9 +87,9 @@ export class GeneralElementsComponent implements OnInit {
                 "dadosClienteCreditoPJ": {
                     "id": 2,
                     "nivelGrupo": "Participante",
-                    "nome": "Americanas SP",
+                    "nome": "Empresa Teste SP",
                     "tipoPessoa": "J",
-                    "numeroDocumento": "123456789000100",
+                    "numeroDocumento": "26055306000139",
                     "segmento": "G"
                 },
                 "valorLimite": {
@@ -104,9 +103,9 @@ export class GeneralElementsComponent implements OnInit {
                 "dadosClienteCreditoPJ": {
                     "id": 3,
                     "nivelGrupo": "Participante",
-                    "nome": "Americanas RJ",
+                    "nome": "Empresa Teste RJ",
                     "tipoPessoa": "J",
-                    "numeroDocumento": "123456789000120",
+                    "numeroDocumento": "58696577000160",
                     "segmento": "G"
                 },
                 "valorLimite": {
