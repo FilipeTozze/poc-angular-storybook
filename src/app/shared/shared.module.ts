@@ -9,6 +9,7 @@ import { InputCustomComponent } from "src/app/shared/components/input-custom/inp
 import { AutoCompleteCustomComponent } from "./components/auto-complete-custom/auto-complete-custom.component";
 import { CnpjPipe } from "./pipe/cnpj.pipe";
 import { PersonComponent } from "./components/person/person.component";
+import { CompanyInfoComponent } from './components/company-info/company-info.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { PersonComponent } from "./components/person/person.component";
     AutoCompleteCustomComponent,
     CnpjPipe,
     PersonComponent,
+    CompanyInfoComponent,
   ],
   imports: [
     CommonModule,
@@ -33,6 +35,7 @@ import { PersonComponent } from "./components/person/person.component";
     InputCustomComponent,
     AutoCompleteCustomComponent,
     PersonComponent,
+    CompanyInfoComponent
   ],
 })
 export class SharedModule {}
